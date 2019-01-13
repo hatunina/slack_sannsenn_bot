@@ -1,0 +1,2 @@
+# slack_sannsenn_bot
+SlackにJoinした新メンバーを参戦させるBotです。
