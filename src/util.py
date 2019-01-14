@@ -8,9 +8,10 @@ import io
 
 
 def get_icon(message):
-    icon_url = message.user.get('profile').get('image_192')
+    icon_url = message.user.get('profile').get('image_512')
     icon = requests.get(icon_url, stream=True)
 
+    # 取得したバイナリデータはオンメモリで処理するのでImage型に変換
     icon_image = Image.open(io.BytesIO(icon.content))
 
     return icon_image
